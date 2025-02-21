@@ -12,17 +12,19 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: What you will make
   - 
-    title: テーマを設定する
+    title: Set the scene
   - 
-    title: 障害物を作る
+    title: Create an obstacle
     completion:
       - engaged
   - 
-    title: 衝突を検出する
+    title: Random obstacles
   - 
-    title: スピードアップ！
+    title: Lots of obstacles
+  - 
+    title: Collisions
     completion:
       - internal
   - 
@@ -35,8 +37,7 @@ steps:
     completion:
       - external
   - 
-    title: プロジェクトをアップグレードする
-  - 
-    title: 共有する
+    title: Challenge
+    challenge: true
   - 
     title: 次は何をしますか？
