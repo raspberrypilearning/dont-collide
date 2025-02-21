@@ -1,62 +1,8 @@
-Agrega el color de tu tema
+Put code to run every frame here
 
-Ubicado en la parte inferior de la pantalla
+Draw player function goes here
 
-Tu color elegido
-
-Carga tu imagen
-
-Controla el tamaño del emoji
-
-Ubicado alrededor del centro
-
-Cara
-
-Ojos
-
-Reemplázalo con tu obstáculo
-
-Antes de dibujar tu jugador
-
-Load your player image
-
-Load your obstacle image
-
-Cambia el tamaño para que se adapte a tu tema
-
-Dibuja un árbol de pino
-
-Verde para la hojas
-
-Marrón para el tronco
-
-Aumenta cada frame
-
-Recircular
-
-Replace with your obstacle
-
-Cualquier número funcionará
-
-Dibuja el punto de colisión
-
-Útil para depurar
-
-Dibuja círculos alrededor de los píxeles para verificar colisiones
-
-A la izquierda de la pantalla
-
-A la derecha de la pantalla
-
-Incluye variables globales aquí
-
-Usa el nivel global
-
-You have reached level
-
-Score: 
-
-Text to display
+Draw obstacles function goes here
 
 Great flying!
 
@@ -69,4 +15,3 @@ But be careful!
 Push harder!
 
 Head for base!
-
