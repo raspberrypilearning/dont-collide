@@ -1,37 +1,19 @@
-## Détection de collision
+## Random obstacles
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Les jeux de coureurs sans fin se terminent souvent lorsque le joueur entre en collision avec un obstacle.
-</div>
-<div>
 
-![Image de l'étape terminée.](images/collision.png){:width="300px"}
-
-</div>
-</div>
-
-Tu peux maintenant configurer ton joueur pour qu'il réagisse à une collision avec un obstacle.
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**La détection de collision**</span> détermine le moment où deux objets créés dans une simulation informatique (qu'il s'agisse d'un jeu, d'une animation ou d'autre chose) se touchent. Il y a plusieurs façons de le faire, par exemple : 
-  - vérifier si les couleurs apparaissant à l'emplacement d'un objet sont les couleurs de cet objet, ou d'un autre
-  - suivre la forme de chaque objet et vérifier si ces formes se chevauchent
-  - créer un ensemble de points de délimitation, ou lignes, autour d'un objet et vérifiant s'ils entrent en contact avec d'autres objets "collisionnables"
-Lorsqu'une telle collision est détectée, le programme peut réagir d'une manière ou d'une autre. Dans un jeu vidéo, il s'agit généralement d'infliger des dégâts (si le joueur entre en collision avec un ennemi ou un danger) ou de donner un avantage (si le joueur entre en collision avec un bonus).
-</p>
+Currently, the obstacle disappears off the bottom of the screen, because its `obstacle_y` position becomes larger than the screen size.
 
 --- task ---
 
-Dans ta fonction `dessine_joueur()`, crée une variable appelée `collision` et règle-la pour obtenir la valeur hexadécimale (hex) de la couleur à la position du joueur.
+Use the modulo (%) operator to divide the y position by the screen size and give you the **remainder**. This makes the obstacle reappear at the top!
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+language: python line_numbers: true line_number_start: 13
+line_highlights: 16
 ---
 
-    collide = get(mouse_x, player_y).hex
+def draw_obstacles(): obstacle_x = 200 obstacle_y = 200 + frame_count obstacle_y = obstacle_y % screen_size text('🌵', obstacle_x, obstacle_y)
 
 --- /code ---
 
@@ -39,134 +21,46 @@ filename: main.py - draw_player()
 
 --- task ---
 
-Crée une condition pour vérifier `if` la variable `collision` est la même que la variable `sur` — si c'est le cas, alors ton joueur touche l'arrière-plan en toute sécurité et n'a pas heurté un obstacle.
+**Test:** Run your code and you should see the obstacle reach the bottom of the screen and then restart from the top.
 
-Déplace ton code pour dessiner ton joueur à l'intérieur de ta condition `if collision == sur` et ajoute du code dans l'instruction `else` pour que le joueur réagisse à la collision.
+--- /task ---
 
-**Choisir :** comment ton joueur doit-il réagir ? Tu pourrais :
-+ Utiliser un emoji différent pour le joueur
-+ Tu peux utiliser `tint()` pour changer l'apparence d'une image, n'oublie pas d'appeler `no_tint()` après avoir dessiné l'image
+--- task ---
 
---- collapse ---
----
-title: Utiliser les caractères emoji
----
-
-Tu peux utiliser des caractères emoji dans la fonction p5 `text()` pour représenter ton joueur après collision.
-
-Voici un exemple :
+Add a line of code for a random **seed**. A seed lets you generate the same random numbers in each frame.
 
 --- code ---
 ---
-language: python
-filename: main.py - setup()
+language: python line_numbers: true line_number_start: 12
+line_highlights: 14
 ---
 
-def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
+# Draw obstacles function goes here
+def draw_obstacles(): seed(1234) obstacle_x = 200 obstacle_y = 200 + frame_count
 
 --- /code ---
+
+--- /task ---
+
+--- task ---
+
+Update the code so that the x, y coordinates for the obstacle are generated randomly.
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+language: python line_numbers: true line_number_start: 12
+line_highlights: 15-16
 ---
 
-def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
+# Draw obstacles function goes here
+def draw_obstacles(): seed(1234) obstacle_x = randint(0, screen_size) obstacle_y = randint(0, screen_size) + frame_count
 
 --- /code ---
 
---- /collapse ---
-
-[[[processing-tint]]]
-
-[[[generic-theory-simple-colours]]]
-
 --- /task ---
 
 --- task ---
 
-**Test :** vérifie si une collision est détectée et si la réaction a lieu à chaque fois qu'une collision se produit.
+**Test:** Run your code and you should see the cactus appear at a random position. Change the `1234` value inside the seed to another number and it will appear somewhere else.
 
 --- /task ---
-
---- task ---
-
-**Débogage :** il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
-
---- collapse ---
----
-title: Il n'y a pas de collision lorsque le joueur atteint un obstacle
----
-
-Si ton personnage joueur touche l'obstacle et que rien ne se passe, il y a quelques points à vérifier :
-
- - Assure-toi d'appeler `dessine_obstacles()` avant `dessine_joueur()`. Si tu vérifies les collisions avant de dessiner les obstacles dans un cadre, il n'y aura aucun obstacle avec lequel entrer en collision !
- - Assure-toi que tu utilises exactement la même couleur lors du dessin de l'objet et dans l'instruction `if` vérifiant la collision. Tu peux t'en assurer en utilisant la même variable `globale` aux deux endroits.
- - Dessines-tu le personnage du joueur avant de vérifier la couleur aux coordonnées de la souris ? Si c'est le cas, tu n'obtiendras jamais que les couleurs du joueur. Tu dois d'abord vérifier la couleur et **puis** dessiner le joueur.
- - As-tu du code dans la partie `else` pour faire quelque chose de différent lorsqu'une collision est détectée, comme appliquer une teinte ou utiliser un emoji ?
- - As-tu correctement indenté le code de ton instruction `if` afin qu'elle s'exécute lorsque la condition est remplie ?
-
-L'impression de la couleur du pixel dont tu vérifies une collision peut être utile :
-
-```python
-    print(red(collide), green(collide), blue(collide))
-```
-
-Tu peux également imprimer un cercle autour du point que tu vérifies et ajuster le point que tu vérifies si tu dois :
-
-```python
-    no_fill()
-    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
-```
-
---- /collapse ---
-
---- /task ---
-
---- task ---
-
-**Facultatif :** pour le moment, tu ne détectes que des collisions sur un pixel de ton joueur. Tu peux également détecter des collisions au niveau d'autres pixels au bord de ton joueur, tels que les bords inférieurs ou les plus à gauche et à droite.
-
---- collapse ---
----
-title: Détection de collision avec plusieurs pixels
----
-
-```python
-def draw_player():
-
-    player_y = int(height * 0.8)
-    # Useful for debugging
-    # Draw circles around the pixels to check for collisions
-
-    no_fill()
-    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
-    ellipse(mouse_x, player_y + 40, 10, 10)
-    ellipse(mouse_x - 12, player_y + 20, 10, 10)
-    ellipse(mouse_x + 12, player_y + 20, 10, 10)
-
-    collide = get(mouse_x, player_y).hex
-    collide2 = get(mouse_x - 12, player_y + 20).hex
-    collide3 = get(mouse_x + 12, player_y + 20).hex
-    collide4 = get(mouse_x, player_y + 40).hex
-
-    if mouse_x < width:  # Off the left of the screen
-        collide2 = safe.hex
-
-    if mouse_x > width:  # Off the right of the screen
-        collide3 = safe.hex
-
-    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
-        text('🎈', mouse_x, player_y)
-    else:
-        text('💥', mouse_x, player_y)
-```
-
---- /collapse ---
-
-Tu peux même utiliser une boucle et vérifier de nombreux pixels différents. C'est ainsi que fonctionne la détection de collision dans les jeux.
-
---- /task ---
-
---- save ---
