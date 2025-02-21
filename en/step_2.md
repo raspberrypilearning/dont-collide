@@ -31,9 +31,11 @@ def draw():
 --- /task ---
 
 --- task ---
+
 **Test:** Run your code and you should see a coloured square. 
 
 The colour is three numbers - the amount of red, green and blue. Try changing the numbers to any whole number between 0 and 255 to get a different colour.
+
 --- /task ---
 
 --- task ---
@@ -79,6 +81,7 @@ def draw():
 --- /task ---
 
 --- task ---
+
 **Test:** Run your code and you should see the emoji appear near the bottom of the screen. 
 
 You can paste in a different emoji if you want to.
@@ -103,9 +106,11 @@ def draw_player():
     text('🤠', mouse_x, 320)
   
 --- /code ---
+
 --- /task ---
 
 --- task ---
+
 Run your code and check that the player moves left and right when you move the mouse. 
 
 
