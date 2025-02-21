@@ -2,37 +2,16 @@ diogel
 
 draw_player
 
-chwaraewr_y
-
-chwaraewr
-
-draw_player
-
-mouse_x
-
-image_file
-
-x_coord
-
-y_coord
-
-width
-
-height
-
 llunio_rhwystrau
 
-rh_x
+obstacle_x
 
-rh_y
+obstacle_y
 
-rhwystr
+screen_size
 
-taro
-
-lefel
+player_on
 
 sgor
 
-message
-
+lives
