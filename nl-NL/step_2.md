@@ -1,42 +1,25 @@
-## Het opzetten van het thema
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Stel het thema van je spel in en maak een spelerspersonage dat de muisaanwijzer volgt.
-
-</div>
-<div>
-
-![Afbeelding van cartoonschildpad van bovenaf gezien tegen een blauwe achtergrond.](images/theme-turtle.png){:width="300px"}
-
-</div>
-</div>
-
-Wat is het thema van je spel? Hier zijn enkele ideeën:
-- Sport
-- Hobbies
-- Wetenschap
-- Natuur
+## Set the scene
 
 --- task ---
 
-Open de [Bots niet! startproject](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. De code editor wordt geopend in een ander browsertabblad.
-
-Als je een Raspberry Pi-account hebt, kun je op de **Save** knop klikken om een kopie op te slaan in je **Projects**.
+Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}.
 
 --- /task ---
 
 --- task ---
 
-**Kies:** Stel de grootte van je canvas in.
+Create a variable called `safe` to store the background colour.
+
+In the game, the player is safe if they are touching the background colour.
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-line_highlights: 10
+language: python line_numbers: true line_number_start: 20
+line_highlights: 22-24
 ---
 
-def setup(): size(400, 400)
+def draw():   
+# Put code to run every frame here global safe safe = Color(200, 100, 0) background(safe)
 
 --- /code ---
 
@@ -44,243 +27,74 @@ def setup(): size(400, 400)
 
 --- task ---
 
-Maak een variabele met de naam `veilig` om de achtergrondkleur op te slaan op basis van het thema dat je voor jouw spel wilt.
+**Test:** Run your code and you should see a coloured square.
 
-Dit is de kleur waarop de speler veilig kan staan en je zult deze variabele later opnieuw gebruiken.
-
---- code ---
----
-language: python filename: main.py - draw() line_numbers: true line_number_start: 13
-line_highlights: 14, 15, 16
----
-
-def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
-
---- /code ---
-
-[[[generic-theory-simple-colours]]]
+The colour is three numbers - the amount of red, green and blue. Try changing the numbers to any whole number between 0 and 255 to get a different colour.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Voer je code uit om de achtergrondkleur te zien. Verander het totdat je tevreden bent met de kleur en de grootte van het scherm.
-
---- /task ---
-
-Kies nu het personage dat het spel speelt en de obstakels ontwijkt. Is het een object, persoon, dier of iets anders?
-
-De speler verschijnt op een vaste `y` positie en dezelfde `x` positie als de muisaanwijzer, die is opgeslagen in de `p5` variabele `mouse_x`.
-
---- task ---
-
-Het is een goed idee om de code voor het personage van de speler in een functie op te nemen.
-
-Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de vaste `y` positie van de speler:
+Define a `draw_player` function. Inside, add an emoji and a pair of x, y coordinates to represent the player.
 
 --- code ---
 ---
-language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
-line_highlights: 12-14
+language: python line_numbers: true line_number_start: 7
+line_highlights: 8-9
 ---
-
-def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
+# Draw player function goes here
+def draw_player(): text('🤠', 200, 320)
 
 --- /code ---
-
-Voeg code toe aan `draw()` om `teken_speler()` voor elk frame aan te roepen.
-
---- code ---
----
-language: python filename: main.py - draw() line_numbers: true line_number_start: 15
-line_highlights: 19
----
-
-def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
-
---- /code ---
-
---- /task ---
-
-Vervolgens voeg je code toe aan de functie `teken_speler()` om je vorm te tekenen. Mogelijk moet je ook `setup()` code toevoegen.
-
---- task ---
-
-**Kies:** Hoe ziet je speler eruit? Je speler kan zijn:
-+ Een afbeelding in het startproject
-+ Een emoji 🎈 of tekst
-+ Getekend met een reeks vormen
-
---- collapse ---
----
-title: Gebruik een startafbeelding
----
-
-Afbeeldingen die in het startproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
-
-![De afbeeldingengalerij met de meegeleverde afbeeldingen.](images/starter-images.png)
-
-Noteer de naam van de afbeelding die je wilt gebruiken.
-
-Laad de afbeelding in de `setup()` functie
-
---- code ---
----
-language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-line_highlights: 11-12
----
-
-def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
-
---- /code ---
-
-Roep de `image()` aan en stel deze in als global in de `teken_speler()` functie.
-
---- code ---
----
-language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
-line_highlights: 16
----
-
-def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
-
---- /code ---
-
---- /collapse ---
-
---- collapse ---
----
-title: Emoji-tekens gebruiken
----
-
-Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als speler te gebruiken.
-
-Hier is een voorbeeld:
-
---- code ---
----
-language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-line_highlights: 11-13
----
-
-def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
-
---- /code ---
-
-Roep de `text()` aan en stel deze in als global in de functie `teken_speler()`.
-
---- code ---
----
-language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
-line_highlights: 16-17
----
-
-def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
-
---- /code ---
-
---- /collapse ---
-
-[[[processing-python-text]]]
-
-[[[generic-theory-simple-colours]]]
-
-[[[processing-python-ellipse]]]
-
-[[[processing-python-rect]]]
-
-[[[processing-python-triangle]]]
-
-[[[processing-tint]]]
-
-[[[processing-stroke]]]
-
-**Tip:** Je kunt meerdere eenvoudige vormen in dezelfde functie gebruiken om een complexere speler te maken.
-
---- collapse ---
----
-title: Teken een speler met meerdere vormen
----
-
-![Een gezichtsvorm gemaakt van een groene cirkel als achtergrond en twee ogen getekend uit blauwe cirkels, met zwarte cirkels erin en een glinstering binnenin die met een witte cirkel werd gemaakt.](images/face_player.png)
-
---- code ---
----
-language: python
-filename: main.py - draw_player()
----
-
-def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
-
-    # Eyes
-    fill(0, 100, 200)
-    ellipse(mouse_x - 10, player_y - 10, 20, 20)
-    ellipse(mouse_x + 10, player_y - 10, 20, 20)
-    fill(0)
-    ellipse(mouse_x - 10, player_y - 10, 10, 10)
-    ellipse(mouse_x + 10, player_y - 10, 10, 10)
-    fill(255)
-    ellipse(mouse_x - 12, player_y - 12, 5, 5)
-    ellipse(mouse_x + 12, player_y - 12, 5, 5)
-
---- /code ---
-
---- /collapse ---
 
 --- /task ---
 
 --- task ---
 
-**Test:** Voer je code uit en beweeg de muis om de speler te besturen.
+Call the `draw_player` function so that the player is drawn on the screen.
 
-Beweegt het zoals verwacht?
+--- code ---
+---
+language: python line_numbers: true line_number_start: 21
+line_highlights: 26
+---
+
+def draw():  
+# Put code to run every frame here global safe safe = Color(200, 100, 0) background(safe) draw_player()
+
+--- /code ---
 
 --- /task ---
-
-**Debug:** Mogelijk vindt je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- task ---
 
---- collapse ---
----
-title: Ik zie de speler niet
----
+**Test:** Run your code and you should see the emoji appear near the bottom of the screen.
 
-Probeer over te schakelen naar volledig scherm. Controleer ook de `x` en `y` coördinaten die je hebt gebruikt om de speler te tekenen — zorg ervoor dat ze binnen het canvas staan dat je hebt gemaakt met `size()`.
-
---- /collapse ---
-
---- collapse ---
----
-title: Een afbeelding wordt niet geladen
----
-
-Controleer eerst of de afbeelding in de `Afbeeldingenbibliotheek`staat. Controleer vervolgens de bestandsnaam heel zorgvuldig - onthoud dat hoofdletters anders zijn dan kleine letters en interpunctie is belangrijk.
-
---- /collapse ---
-
---- collapse ---
----
-title: Een afbeelding heeft de verkeerde afmeting
----
-
-Controleer de invoer die de breedte en hoogte van de afbeelding bepaalt:
-
-```python
-image(image_file, x_coord, y_coord, width, height)
-```
-
---- /collapse ---
-
---- collapse ---
----
-title: Een emoji heeft de verkeerde afmeting
----
-
-Als je emoji te groot of te klein is, verander je de invoer in `text_size()`.
-
---- /collapse ---
+You can paste in a different emoji if you want to.
 
 --- /task ---
 
---- save ---
+[[[choose-an-emoji]]]
+
+--- task ---
+
+To make the player follow the mouse as it moves from side to side, change the player's x position to `mouse_x`.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 7
+line_highlights: 9
+---
+# Draw player function goes here
+def draw_player(): text('🤠', mouse_x, 320)
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Run your code and check that the player moves left and right when you move the mouse.
+
+
+--- /task ---
