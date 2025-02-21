@@ -1,62 +1,8 @@
-أضف لون الخلفية الخاصة بك
+Put code to run every frame here
 
-يتم وضعه باتجاه أسفل الشاشة
+Draw player function goes here
 
-اللون الذي اخترته
-
-تحميل صورتك
-
-يتحكم في حجم الرموز التعبيرية
-
-موضع حول المركز
-
-وجه
-
-عيون
-
-استبدل بعقبتك
-
-قبل رسم اللاعب
-
-Load your player image
-
-Load your obstacle image
-
-Resize لتناسب موضوعك
-
-رسم شجرة الصنوبر
-
-اخضر للاوراق الإبرية
-
-بني للساق
-
-زيادة كل إطار
-
-الالتفاف
-
-Replace with your obstacle
-
-الالتفاف حول
-
-رسم نقطة الاصطدام
-
-مفيد لتصحيح الأخطاء
-
-ارسم دوائر حول البكسل للتحقق من الاصطدامات
-
-من يسار الشاشة
-
-من يمين الشاشة
-
-قم بتضمين المتغيرات العالمية هنا
-
-استخدم المستوى العالمي
-
-You have reached level
-
-Score: 
-
-Text to display
+Draw obstacles function goes here
 
 Great flying!
 
@@ -69,4 +15,3 @@ But be careful!
 Push harder!
 
 Head for base!
-
