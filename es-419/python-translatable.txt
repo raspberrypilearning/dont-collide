@@ -2,37 +2,16 @@ a_salvo
 
 draw_player
 
-jugador_y
-
-jugador
-
-draw_player
-
-mouse_x
-
-image_file
-
-x_coord
-
-y_coord
-
-width
-
-height
-
 dibujar_obstaculos
 
-obstaculo_x
+obstacle_x
 
-obstaculo_y
+obstacle_y
 
-obstaculo
+screen_size
 
-colision
-
-nivel
+player_on
 
 puntaje
 
-message
-
+lives
