@@ -2,37 +2,16 @@ sicuro
 
 disegna_giocatore
 
-giocatore_y
-
-giocatore
-
-disegna_giocatore
-
-mouse_x
-
-image_file
-
-x_coord
-
-y_coord
-
-larghezza
-
-altezza
-
 disegnare_ostacoli
 
-ob_x
+obstacle_x
 
-ob_y
+obstacle_y
 
-ostacolo
+screen_size
 
-collisione
-
-livello
+player_on
 
 punteggio
 
-messaggio
-
+lives
