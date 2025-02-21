@@ -1,62 +1,8 @@
-テーマの色
+Put code to run every frame here
 
-画面の下の方に置く
+Draw player function goes here
 
-選んだ色
-
-選んだ画像
-
-絵文字の大きさ
-
-真ん中に置く
-
-顔
-
-目
-
-作ったか選んだ障害物にしてください
-
-プレーヤーを描く前に
-
-Load your player image
-
-Load your obstacle image
-
-テーマに合わせてサイズを変更
-
-モミの木を描く
-
-葉の部分は緑
-
-幹は茶色
-
-フレームごとに増やす
-
-下に外れたら上から出てくるように
-
-Replace with your obstacle
-
-どんな数でもよい
-
-衝突点の描画
-
-デバッグに有効
-
-衝突をチェックするピクセルの周りに円を描く
-
-スクリーンの左に外れた
-
-スクリーンの右に外れた
-
-グローバル変数をここに書く
-
-グローバル変数
-
-You have reached level
-
-Score: 
-
-Text to display
+Draw obstacles function goes here
 
 Great flying!
 
@@ -69,4 +15,3 @@ But be careful!
 Push harder!
 
 Head for base!
-
