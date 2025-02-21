@@ -1,42 +1,25 @@
-## Defina o tema
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Defina o tema do seu jogo e crie um personagem de jogador que siga o ponteiro do mouse.
-
-</div>
-<div>
-
-![Imagem de desenho animado de tartaruga vista de cima contra um fundo azul.](images/theme-turtle.png){:width="300px"}
-
-</div>
-</div>
-
-Qual é o tema do seu jogo? Aqui estão algumas ideias:
-- Esportes
-- Passatempos
-- Ciência
-- Natureza
+## Set the scene
 
 --- task ---
 
-Abra o [Não Colida! projeto inicial](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} projeto. O editor de código será aberto em outra guia do navegador.
-
-Se você tiver uma conta Trinket, você pode clicar no botão **Remix** para salvar uma cópia em sua biblioteca **My Trinkets**.
+Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}.
 
 --- /task ---
 
 --- task ---
 
-**Escolha:** Defina o tamanho da sua tela.
+Create a variable called `safe` to store the background colour.
+
+In the game, the player is safe if they are touching the background colour.
 
 --- code ---
 ---
-language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-line_highlights: 10
+language: python line_numbers: true line_number_start: 20
+line_highlights: 22-24
 ---
 
-def setup(): size(400, 400)
+def draw():   
+# Put code to run every frame here global safe safe = Color(200, 100, 0) background(safe)
 
 --- /code ---
 
@@ -44,243 +27,74 @@ def setup(): size(400, 400)
 
 --- task ---
 
-Crie uma variável chamada `seguro` para armazenar a cor de fundo com base no tema que você quer para o seu jogo.
+**Test:** Run your code and you should see a coloured square.
 
-Esta é a cor segura para o jogador e você vai usar esta variável de novo mais tarde.
-
---- code ---
----
-language: python filename: main.py - draw() line_numbers: true line_number_start: 13
-line_highlights: 14, 15, 16
----
-
-def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
-
---- /code ---
-
-[[[generic-theory-simple-colours]]]
+The colour is three numbers - the amount of red, green and blue. Try changing the numbers to any whole number between 0 and 255 to get a different colour.
 
 --- /task ---
 
 --- task ---
 
-**Teste:** Execute seu código para ver a cor de fundo. Mude-o até ficar satisfeito com a cor e o tamanho da tela.
-
---- /task ---
-
-Agora escolha o personagem que está jogando o jogo e evitando os obstáculos. É um objeto, pessoa, animal, ou outra coisa?
-
-O jogador aparecerá em uma posição de `y` fixa e na mesma posição `x` do ponteiro do mouse, que é armazenado na variável `mouse_x` da `p5`.
-
---- task ---
-
-É uma boa ideia organizar o código para desenhar o jogador em uma função.
-
-Defina uma função `desenhar_jogador()` e crie uma `jogador_y` para a posição fixa `y` do jogador:
+Define a `draw_player` function. Inside, add an emoji and a pair of x, y coordinates to represent the player.
 
 --- code ---
 ---
-language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
-line_highlights: 12-14
+language: python line_numbers: true line_number_start: 7
+line_highlights: 8-9
 ---
-
-def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
+# Draw player function goes here
+def draw_player(): text('🤠', 200, 320)
 
 --- /code ---
-
-Adicione o código a `draw()` para chamar `desenhar_jogador()` a cada quadro.
-
---- code ---
----
-language: python filename: main.py - draw() line_numbers: true line_number_start: 15
-line_highlights: 19
----
-
-def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
-
---- /code ---
-
---- /task ---
-
-Em seguida, você adicionará código à função `desenhar_jogador()` para desenhar sua forma. Você também pode precisar adicionar o código `setup()`.
-
---- task ---
-
-**Escolha:** Qual é a aparência do seu jogador? Seu jogador pode ser:
-+ Uma imagem fornecida no projeto inicial
-+ Um emoji 🎈 ou texto
-+ Desenhado usando uma série de formas
-
---- collapse ---
----
-title: Use uma imagem inicial
----
-
-As imagens incluídas no projeto inicial serão mostradas na `Galeria de imagens`.
-
-![A galeria de imagens exibindo as imagens incluídas.](images/starter-images.png)
-
-Anote o nome da imagem que deseja usar.
-
-Carregue a imagem na função `setup()`
-
---- code ---
----
-language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-line_highlights: 11-12
----
-
-def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
-
---- /code ---
-
-Chame o `image()` e defina-o como global na função `desenhar_jogador()`.
-
---- code ---
----
-language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
-line_highlights: 16
----
-
-def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
-
---- /code ---
-
---- /collapse ---
-
---- collapse ---
----
-título: Use caracteres emoji
----
-
-Você pode usar caracteres emoji na função p5 `text()` para usar um emoji para representar seu jogador.
-
-Aqui está um exemplo:
-
---- code ---
----
-language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-line_highlights: 11-13
----
-
-def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
-
---- /code ---
-
-Chame o `text()` e defina-o como global na função `desenhar_jogador()`.
-
---- code ---
----
-language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
-line_highlights: 16-17
----
-
-def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
-
---- /code ---
-
---- /collapse ---
-
-[[[processing-python-text]]]
-
-[[[generic-theory-simple-colours]]]
-
-[[[processing-python-ellipse]]]
-
-[[[processing-python-rect]]]
-
-[[[processing-python-triangle]]]
-
-[[[processing-tint]]]
-
-[[[processing-stroke]]]
-
-**Dica:** Você pode usar várias formas simples na mesma função para criar um jogador mais complexo.
-
---- collapse ---
----
-title: Desenhe um jogador usando várias formas
----
-
-![Um formato de rosto feito de um círculo verde como fundo e dois olhos desenhados de círculos azuis, com círculos pretos dentro e um brilho dentro deles usando um círculo branco.](images/face_player.png)
-
---- code ---
----
-language: python
-filename: main.py - draw_player()
----
-
-def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
-
-    # Eyes
-    fill(0, 100, 200)
-    ellipse(mouse_x - 10, player_y - 10, 20, 20)
-    ellipse(mouse_x + 10, player_y - 10, 20, 20)
-    fill(0)
-    ellipse(mouse_x - 10, player_y - 10, 10, 10)
-    ellipse(mouse_x + 10, player_y - 10, 10, 10)
-    fill(255)
-    ellipse(mouse_x - 12, player_y - 12, 5, 5)
-    ellipse(mouse_x + 12, player_y - 12, 5, 5)
-
---- /code ---
-
---- /collapse ---
 
 --- /task ---
 
 --- task ---
 
-**Teste:** Execute seu código e mova o mouse para controlar o jogador.
+Call the `draw_player` function so that the player is drawn on the screen.
 
-Ele se move como você espera?
+--- code ---
+---
+language: python line_numbers: true line_number_start: 21
+line_highlights: 26
+---
+
+def draw():  
+# Put code to run every frame here global safe safe = Color(200, 100, 0) background(safe) draw_player()
+
+--- /code ---
 
 --- /task ---
-
-**Depurar:** Talvez você encontre alguns bugs em seu projeto que precisam de correção. Aqui estão alguns bugs comuns.
 
 --- task ---
 
---- collapse ---
----
-título: não vejo o jogador
----
+**Test:** Run your code and you should see the emoji appear near the bottom of the screen.
 
-Tente mudar para tela cheia. Além disso, verifique as coordenadas `x` e `y` que você usou para desenhar o jogador — certifique-se de que elas estejam dentro da tela que você criou com `size()`.
-
---- /collapse ---
-
---- collapse ---
----
-title: Uma imagem não está carregando
----
-
-Primeiro, verifique se a imagem está na `Galeria de imagens`. Em seguida, verifique o nome do arquivo com muito cuidado - lembre-se de que as letras maiúsculas são diferentes das letras minúsculas e a pontuação é importante.
-
---- /collapse ---
-
---- collapse ---
----
-title: Uma imagem tem o tamanho errado
----
-
-Verifique as entradas que controlam a largura e a altura da imagem:
-
-```python
-image(image_file, x_coord, y_coord, width, height)
-```
-
---- /collapse ---
-
---- collapse ---
----
-title: Uma imagem tem o tamanho errado
----
-
-Se o seu emoji for muito grande ou muito pequeno, altere o valor em `text_size()`.
-
---- /collapse ---
+You can paste in a different emoji if you want to.
 
 --- /task ---
 
---- save ---
+[[[choose-an-emoji]]]
+
+--- task ---
+
+To make the player follow the mouse as it moves from side to side, change the player's x position to `mouse_x`.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 7
+line_highlights: 9
+---
+# Draw player function goes here
+def draw_player(): text('🤠', mouse_x, 320)
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Run your code and check that the player moves left and right when you move the mouse.
+
+
+--- /task ---
