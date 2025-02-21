@@ -1,62 +1,8 @@
-Add the colour of your theme
+Put code to run every frame here
 
-Positioned towards the screen bottom
+Draw player function goes here
 
-Your chosen colour
-
-Load your image
-
-Controls the size of the emoji
-
-Position around the centre
-
-Face
-
-Eyes
-
-Replace with your obstacle
-
-Before drawing the player
-
-Load your player image
-
-Load your obstacle image
-
-Resize to fit your theme
-
-Draw a fir tree
-
-Green for needles
-
-Brown for trunk
-
-Increases each frame
-
-Wrap around
-
-Replace with your obstacle
-
-Any number is fine
-
-Draw collision point
-
-Useful for debugging
-
-Draw circles around the pixels to check for collisions
-
-Off the left of the screen
-
-Off the right of the screen
-
-Include global variables here
-
-Use the global level
-
-You have reached level
-
-Score: 
-
-Text to display
+Draw obstacles function goes here
 
 Great flying!
 
@@ -69,4 +15,3 @@ But be careful!
 Push harder!
 
 Head for base!
-
