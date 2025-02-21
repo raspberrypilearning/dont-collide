@@ -12,17 +12,19 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: What you will make
   - 
-    title: Gosod y thema
+    title: Set the scene
   - 
-    title: Creu rhwystrau
+    title: Create an obstacle
     completion:
       - engaged
   - 
-    title: Canfod gwrthdrawiad
+    title: Random obstacles
   - 
-    title: Cyflymu pethau!
+    title: Lots of obstacles
+  - 
+    title: Collisions
     completion:
       - internal
   - 
@@ -35,8 +37,7 @@ steps:
     completion:
       - external
   - 
-    title: Uwchraddio dy brosiect
-  - 
-    title: Rhannu
+    title: Challenge
+    challenge: true
   - 
     title: Beth nesaf?
