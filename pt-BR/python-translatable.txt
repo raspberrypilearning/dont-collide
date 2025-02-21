@@ -2,37 +2,16 @@ seguro
 
 desenhar_jogador
 
-jogador_y
-
-jogador
-
-desenhar_jogador
-
-mouse_x
-
-arquivo_imagem
-
-x_coord
-
-y_coord
-
-largura
-
-altura
-
 desenhar_obstaculos
 
-ob_x
+obstacle_x
 
-ob_y
+obstacle_y
 
-obstaculo
+screen_size
 
-colide
-
-nivel
+player_on
 
 pontos
 
-mensagem
-
+lives
