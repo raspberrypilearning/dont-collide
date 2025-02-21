@@ -1,62 +1,8 @@
-Ychwanegwch liw eich thema
+Put code to run every frame here
 
-Lleoli tua gwaelod y sgrin
+Draw player function goes here
 
-Y lliw o'ch dewis
-
-Llwytho eich delwedd
-
-Rheoli maint yr emoji
-
-Lleoli o amgylch y canol
-
-Wyneb
-
-Llygaid
-
-Disodli gyda'ch rhwystr
-
-Cyn llunio'r chwaraewr
-
-Load your player image
-
-Load your obstacle image
-
-Newidiwch y maint i gyd-fynd â'ch thema
-
-Llunio coeden bîn
-
-Gwyrdd i'r nodwyddau
-
-Brown i'r boncyff
-
-Cynyddu bob ffrâm
-
-Amlapio
-
-Replace with your obstacle
-
-Unrhyw rif yn iawn
-
-Llunio pwynt gwrthdaro
-
-Defnyddiol ar gyfer difa chwilod
-
-Llunio cylchoedd o amgylch y picseli i wirio am wrthdrawiad
-
-Oddi ar ochr chwith y sgrin
-
-Oddi ar ochr dde'r sgrin
-
-Rhowch newidynnau cyffredinol yma
-
-Defnyddio'r lefel gyffredinol
-
-You have reached level
-
-Score: 
-
-Text to display
+Draw obstacles function goes here
 
 Great flying!
 
@@ -69,4 +15,3 @@ But be careful!
 Push harder!
 
 Head for base!
-
