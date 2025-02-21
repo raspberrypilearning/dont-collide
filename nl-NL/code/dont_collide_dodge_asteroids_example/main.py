@@ -106,8 +106,8 @@ def setup():
     text_size(40)
     text_align(CENTER, TOP) # positie rond het midden, bovenaan
     
-    rocket = load_image('rocket.png')
-    rock = load_image('moon.png')
+    raket = load_image('rocket.png')
+    rots = load_image('moon.png')
     random_seed = randint(0, 1000000)
   
 def draw():
