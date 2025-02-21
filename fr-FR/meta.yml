@@ -12,21 +12,23 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Ce que tu vas faire
+    title: What you will make
   - 
-    title: Définir le thème
+    title: Set the scene
   - 
-    title: Créer des obstacles
+    title: Create an obstacle
     completion:
       - engaged
   - 
-    title: Détection de collision
+    title: Random obstacles
   - 
-    title: Accélérer !
+    title: Lots of obstacles
+  - 
+    title: Collisions
     completion:
       - internal
   - 
-    title: Questionnaire rapide
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,8 +37,7 @@ steps:
     completion:
       - external
   - 
-    title: Améliorer ton projet
-  - 
-    title: Partager
+    title: Challenge
+    challenge: true
   - 
     title: Et ensuite ?
