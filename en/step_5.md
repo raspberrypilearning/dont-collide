@@ -29,10 +29,13 @@ Make sure that the code for the seed is before the loop, otherwise all of your o
 --- /task ---
 
 --- task ---
+
 Change the number inside `range()` to control how many obstacles are created.
 
 --- /task ---
 
---- task --- 
+--- task ---
+
 **Test:** Run your code and you should see several obstacles. 
+
 --- /task ---

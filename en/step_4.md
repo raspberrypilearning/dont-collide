@@ -26,10 +26,13 @@ def draw_obstacles():
 --- /task ---
 
 --- task ---
+
 **Test:** Run your code and you should see the obstacle reach the bottom of the screen and then restart from the top.
+
 --- /task ---
 
 --- task ---
+
 Add a line of code for a random **seed**. A seed lets you generate the same random numbers in each frame.
 
 --- code ---
@@ -47,9 +50,11 @@ def draw_obstacles():
     obstacle_y = 200 + frame_count
 
 --- /code ---
+
 --- /task ---
 
 --- task ---
+
 Update the code so that the x, y coordinates for the obstacle are generated randomly.
 
 --- code ---
@@ -71,5 +76,7 @@ def draw_obstacles():
 --- /task ---
 
 --- task ---
-**Test:** Run your code and you should see the cactus appear at a random position. Change the `1234` value inside the seed to another number and it will appear somewhere else. 
+
+**Test:** Run your code and you should see the cactus appear at a random position. Change the `1234` value inside the seed to another number and it will appear somewhere else.
+
 --- /task ---

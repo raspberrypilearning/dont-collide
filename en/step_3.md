@@ -53,7 +53,9 @@ def draw():
 
 
 --- task ---
-**Test:** Run your code and you should see a cactus as well as your player. 
+
+**Test:** Run your code and you should see a cactus as well as your player.
+
 --- /task ---
 
 --- task --- 
@@ -95,9 +97,11 @@ def draw_obstacles():
     text('🌵', obstacle_x, obstacle_y) 
 
 --- /code ---
+
 --- /task ---
 
 --- task --- 
+
 **Test:** Run your code and the cactus emoji should move down the screen until it reaches the bottom.  
 
 --- /task ---
