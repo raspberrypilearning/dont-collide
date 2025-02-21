@@ -12,17 +12,19 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: What you will make
   - 
-    title: Ορίζοντας το θέμα
+    title: Set the scene
   - 
-    title: Δημιούργησε τα εμπόδια
+    title: Create an obstacle
     completion:
       - engaged
   - 
-    title: Ανίχνευση σύγκρουσης
+    title: Random obstacles
   - 
-    title: Επιτάχυνε!
+    title: Lots of obstacles
+  - 
+    title: Collisions
     completion:
       - internal
   - 
@@ -35,8 +37,7 @@ steps:
     completion:
       - external
   - 
-    title: Αναβάθμιση του έργου σου
-  - 
-    title: Μοιράσου
+    title: Challenge
+    challenge: true
   - 
     title: Και τώρα;
