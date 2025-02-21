@@ -1,62 +1,8 @@
-Aggiungi il colore del tuo tema
+Put code to run every frame here
 
-Posizionato verso la parte inferiore dello schermo
+Draw player function goes here
 
-Il colore che hai scelto
-
-Carica la tua immagine
-
-Controlla la dimensione dell'emoji
-
-Posizionati circa al centro
-
-Volto
-
-Occhi
-
-Sostituisci con il tuo ostacolo
-
-Prima di disegnare il giocatore
-
-Carica l'immagine del tuo giocatore
-
-Carica l'immagine dell'ostacolo
-
-Ridimensiona per adattarlo al tuo tema
-
-Disegna un abete
-
-Verde per gli aghi
-
-Marrone per il tronco
-
-Aumenta ciascun fotogramma
-
-Avvolgere
-
-Sostituisci con il tuo ostacolo
-
-Qualsiasi numero va bene
-
-Disegna il punto di collisione
-
-Utile per il debug
-
-Disegna cerchi attorno ai pixel per verificare le collisioni
-
-Alla sinistra dello schermo
-
-Alla destra dello schermo
-
-Includi qui le variabili globali
-
-Usa global livello
-
-Hai raggiunto il livello
-
-Punteggio: 
-
-Testo da visualizzare
+Draw obstacles function goes here
 
 Gran volo!
 
@@ -69,4 +15,3 @@ Ma fa attenzione!
 Insisti!
 
 Verso la base!
-
