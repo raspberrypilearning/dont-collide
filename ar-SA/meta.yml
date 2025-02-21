@@ -12,17 +12,19 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: What you will make
   - 
-    title: عيّن الموضوع
+    title: Set the scene
   - 
-    title: اصنع عقبات
+    title: Create an obstacle
     completion:
       - engaged
   - 
-    title: كشف الاصطدام
+    title: Random obstacles
   - 
-    title: اسرع!
+    title: Lots of obstacles
+  - 
+    title: Collisions
     completion:
       - internal
   - 
@@ -35,8 +37,7 @@ steps:
     completion:
       - external
   - 
-    title: قم بتطوير مشروعك
-  - 
-    title: مشاركة
+    title: Challenge
+    challenge: true
   - 
     title: ما التالي؟
