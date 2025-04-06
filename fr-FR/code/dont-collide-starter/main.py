@@ -2,18 +2,18 @@ from p5 import *
 from random import randint, seed
 
 # Mets les variables globales ici
-screen_size = 400
+taille_ecran = 400
 
-# Draw player function goes here
+# La fonction de dessin du joueur se trouve ici
 
 
 
-# Draw obstacles function goes here
+# La fonction de dessin d'obstacles se trouve ici
 
 
 def setup():
     # Mets le code à exécuter au démarrage ici
-    size(screen_size, screen_size)
+    size(taille_ecran, taille_ecran)
     text_size(40)
 
 
