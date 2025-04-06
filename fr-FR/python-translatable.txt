@@ -8,10 +8,10 @@ obstacle_x
 
 obstacle_y
 
-screen_size
+taille_ecran
 
-player_on
+joueur_sur
 
 score
 
-lives
+vies
