@@ -1,66 +1,66 @@
-## Challenge
+## Défi
 
 --- challenge ---
 
-Now it is over to you! Use the skills you have learned to finish the game.
+C'est maintenant à toi de jouer ! Utilise les compétences que tu as apprises pour terminer le jeu.
 
 --- task ---
 
-Use different emojis to represent the player and the obstacles.
+Utilise différents emojis pour représenter le joueur et les obstacles.
 
 --- /task ---
 
 --- task ---
 
-Draw the player or the obstacles using shapes instead (you learned this in the [Make a face](https://projects.raspberrypi.org/en/projects/editor-make-a-face/editor){:target="_blank"} project).
+Dessine le joueur ou les obstacles en utilisant des formes à la place (tu as appris cela dans le projet [Faire un visage](https://projects.raspberrypi.org/en/projects/editor-make-a-face/editor){:target="_blank"}).
 
 --- /task ---
 
 --- task ---
 
-Draw the player or the obstacles using images instead (you learned this in the [Rocket launch](https://projects.raspberrypi.org/en/projects/editor-rocket-launch/editor){:target="_blank"}  project).
+Dessine le joueur ou les obstacles en utilisant des images à la place (tu as appris cela dans le projet [Lancement de fusée](https://projects.raspberrypi.org/en/projects/editor-rocket-launch/editor){:target="_blank"}).
 
 --- /task ---
 
 --- task ---
 
-Change one line of code to make the obstacles move faster.
+Modifie une ligne de code pour que les obstacles se déplacent plus rapidement.
 
 --- /task ---
 
 --- task ---
 
-Create a variable and add one to it each time the player crashes.
+Crée une variable et ajoutes-en une à chaque fois que le joueur se plante.
 
 --- /task ---
 
 --- task ---
 
-Make the obstacles move faster after every crash.
+Fais en sorte que les obstacles se déplacent plus rapidement après chaque collision.
 
 --- /task ---
 
 --- task ---
 
-Add an item for the player to pick up, which disappears when the player touches it.
+Ajoute un objet que le joueur peut ramasser et qui disparaît lorsque le joueur le touche.
 
 --- /task ---
 
 --- task ---
 
-Add a variable to keep track of the player's score.
+Ajoute une variable pour suivre le score du joueur.
 
 --- /task ---
 
 --- task ---
 
-Stop the game if the player crashes.
+Arrête le jeu si le joueur se plante.
 
 --- /task ---
 
 --- task ---
 
-Display a text message on the screen to say 'Game over'.
+Affiche un message texte sur l'écran pour dire « Partie terminée ».
 
 --- /task ---
 
