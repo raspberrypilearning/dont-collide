@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Importe les librairies de code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 
@@ -28,7 +28,7 @@ def dessine_joueur():
     global score, niveau
     
     joueur_x = int(width * 0.2)
-    joueur_y = mouse_y
+    joueur_y = souris_y
     
     collision = get(joueur_x + 50, joueur_y + 15)
     collision2 = get(joueur_x + 50, joueur_y - 15).hex
