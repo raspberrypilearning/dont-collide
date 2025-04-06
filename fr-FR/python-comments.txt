@@ -1,8 +1,8 @@
-Put code to run every frame here
+Mettre le code pour exécuter chaque image ici
 
-Draw player function goes here
+La fonction de dessin du joueur se trouve ici
 
-Draw obstacles function goes here
+La fonction de dessin d'obstacles se trouve ici
 
 Superbe vol !
 
