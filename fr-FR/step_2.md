@@ -1,16 +1,16 @@
-## Set the scene
+## Définir la scène
 
 --- task ---
 
-Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}.
+Ouvre le [projet de démarrage](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}.
 
 --- /task ---
 
 --- task ---
 
-Create a variable called `safe` to store the background colour.
+Crée une variable appelée `sur` pour stocker la couleur d'arrière-plan.
 
-In the game, the player is safe if they are touching the background colour.
+Dans le jeu, le joueur est en sécurité s'il touche la couleur d'arrière-plan.
 
 --- code ---
 ---
@@ -27,15 +27,15 @@ def draw():
 
 --- task ---
 
-**Test:** Run your code and you should see a coloured square.
+**Test :** exécute ton code et tu devrais voir un carré coloré.
 
-The colour is three numbers - the amount of red, green and blue. Try changing the numbers to any whole number between 0 and 255 to get a different colour.
+La couleur est composée de trois nombres : la quantité de rouge, de vert et de bleu. Essaie de remplacer les nombres par n'importe quel nombre entier compris entre 0 et 255 pour obtenir une couleur différente.
 
 --- /task ---
 
 --- task ---
 
-Define a `draw_player` function. Inside, add an emoji and a pair of x, y coordinates to represent the player.
+Définis une fonction `dessine_joueur` . À l'intérieur, ajoute un emoji et une paire de coordonnées x, y pour représenter le joueur.
 
 --- code ---
 ---
@@ -51,7 +51,7 @@ def draw_player(): text('🤠', 200, 320)
 
 --- task ---
 
-Call the `draw_player` function so that the player is drawn on the screen.
+Appelle la fonction `dessine_joueur` pour que le joueur soit dessiné à l'écran.
 
 --- code ---
 ---
@@ -68,9 +68,9 @@ def draw():
 
 --- task ---
 
-**Test:** Run your code and you should see the emoji appear near the bottom of the screen.
+**Test :** exécute ton code et tu devrais voir l’emoji apparaître près du bas de l’écran.
 
-You can paste in a different emoji if you want to.
+Tu peux coller un emoji différent si tu le souhaites.
 
 --- /task ---
 
@@ -78,7 +78,7 @@ You can paste in a different emoji if you want to.
 
 --- task ---
 
-To make the player follow the mouse as it moves from side to side, change the player's x position to `mouse_x`.
+Pour que le joueur suive la souris lorsqu'elle se déplace d'un côté à l'autre, modifie la position x du joueur sur `souris_x`.
 
 --- code ---
 ---
@@ -94,7 +94,7 @@ def draw_player(): text('🤠', mouse_x, 320)
 
 --- task ---
 
-Run your code and check that the player moves left and right when you move the mouse.
+Exécute ton code et vérifie que le joueur se déplace à gauche et à droite lorsque tu déplaces la souris.
 
 
 --- /task ---
