@@ -1,4 +1,4 @@
-## Create an obstacle
+## Créer un obstacle
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -13,7 +13,7 @@ Crée les obstacles que tu devras éviter pour continuer à jouer.
 
 --- task ---
 
-Define a `draw_obstacles` function to draw a cactus emoji 🌵.
+Définis une fonction `dessine_obstacles` pour dessiner un emoji cactus 🌵.
 
 --- code ---
 ---
@@ -26,7 +26,7 @@ def draw_obstacles(): text('🌵', 200, 200)
 
 --- /code ---
 
-Call the `draw_obstacles` function so that the cactus is drawn on the screen.
+Appelle la fonction `dessine_obstacles` pour que le cactus soit dessiné sur l'écran.
 
 --- code ---
 ---
@@ -44,13 +44,13 @@ def draw():
 
 --- task ---
 
-**Test:** Run your code and you should see a cactus as well as your player.
+**Test :** exécute ton code et tu devrais voir un cactus ainsi que ton joueur.
 
 --- /task ---
 
 --- task ---
 
-Add two variables to keep track of the obstacle's x and y coordinates. Update the code to draw the emoji so that it uses these variables.
+Ajoute deux variables pour suivre les coordonnées x et y de l'obstacle. Mets à jour le code pour dessiner l'emoji afin qu'il utilise ces variables.
 
 --- code ---
 ---
@@ -66,7 +66,7 @@ def draw_obstacles(): obstacle_x = 200 obstacle_y = 200 text('🌵', obstacle_x,
 
 --- task ---
 
-Now, add `frame_count` to the obstacle's y (vertical) position.
+Maintenant, ajoute `frame_count` à la position y (verticale) de l'obstacle.
 
 --- code ---
 ---
@@ -82,6 +82,6 @@ def draw_obstacles(): obstacle_x = 200 obstacle_y = 200 + frame_count text('🌵
 
 --- task ---
 
-**Test:** Run your code and the cactus emoji should move down the screen until it reaches the bottom.
+**Test :** exécute ton code et l'emoji cactus devrait se déplacer vers le bas de l'écran jusqu'à ce qu'il atteigne le bas.
 
 --- /task ---
