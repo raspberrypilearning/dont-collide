@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Importe les librairies de code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 
@@ -37,13 +37,13 @@ def dessine_joueur():
     
     fill(sur)
   
-    collision = get(mouse_x, joueur_y).hex
+    collision = get(souris_x, joueur_y).hex
     
     if collision == sur.hex:
-        image(ski, mouse_x, joueur_y, 30, 30)
+        image(ski, souris_x, joueur_y, 30, 30)
         score += vitesse
     else:
-        image(chute, mouse_x, joueur_y, 30, 30)
+        image(chute, souris_x, joueur_y, 30, 30)
         vitesse = 0
     
   
