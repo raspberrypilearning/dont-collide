@@ -1,10 +1,10 @@
-## Lots of obstacles
+## Beaucoup d'obstacles
 
-Now you will add code to make lots of obstacles to avoid.
+Tu vas maintenant ajouter du code pour créer de nombreux obstacles à éviter.
 
 --- task ---
 
-Add a loop and indent the code to draw an obstacle. The loop will run this code multiple times.
+Ajoute une boucle et indente le code pour dessiner un obstacle. La boucle exécutera ce code plusieurs fois.
 
 --- code ---
 ---
@@ -16,18 +16,18 @@ def draw_obstacles(): seed(1234) for i in range(8): obstacle_x = randint(0, scre
 
 --- /code ---
 
-Make sure that the code for the seed is before the loop, otherwise all of your obstacles will be generated on top of each other!
+Assure-toi que le code du seed est avant la boucle, sinon tous tes obstacles seront générés les uns sur les autres !
 
 --- /task ---
 
 --- task ---
 
-Change the number inside `range()` to control how many obstacles are created.
+Modifie le nombre dans `range()` pour contrôler le nombre d'obstacles créés.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and you should see several obstacles.
+**Test :** exécute ton code et tu devrais voir plusieurs obstacles.
 
 --- /task ---
