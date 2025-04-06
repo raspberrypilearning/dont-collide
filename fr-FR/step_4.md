@@ -1,11 +1,11 @@
-## Random obstacles
+## Obstacles aléatoires
 
 
-Currently, the obstacle disappears off the bottom of the screen, because its `obstacle_y` position becomes larger than the screen size.
+Actuellement, l'obstacle disparaît du bas de l'écran, car sa position `obstacle_y` devient plus grande que la taille de l'écran.
 
 --- task ---
 
-Use the modulo (%) operator to divide the y position by the screen size and give you the **remainder**. This makes the obstacle reappear at the top!
+Utilise l'opérateur modulo (%) pour diviser la position y par la taille de l'écran et te donner le **reste**. Cela fait réapparaître l'obstacle en haut !
 
 --- code ---
 ---
@@ -21,13 +21,13 @@ def draw_obstacles(): obstacle_x = 200 obstacle_y = 200 + frame_count obstacle_y
 
 --- task ---
 
-**Test:** Run your code and you should see the obstacle reach the bottom of the screen and then restart from the top.
+**Test :** exécute ton code et tu devrais voir l'obstacle atteindre le bas de l'écran, puis redémarrer depuis le haut.
 
 --- /task ---
 
 --- task ---
 
-Add a line of code for a random **seed**. A seed lets you generate the same random numbers in each frame.
+Ajoute une ligne de code pour un **seed** aléatoire. Un seed te permet de générer les mêmes nombres aléatoires dans chaque image.
 
 --- code ---
 ---
@@ -44,7 +44,7 @@ def draw_obstacles(): seed(1234) obstacle_x = 200 obstacle_y = 200 + frame_count
 
 --- task ---
 
-Update the code so that the x, y coordinates for the obstacle are generated randomly.
+Mets à jour le code afin que les coordonnées x, y de l’obstacle soient générées de manière aléatoire.
 
 --- code ---
 ---
@@ -61,6 +61,6 @@ def draw_obstacles(): seed(1234) obstacle_x = randint(0, screen_size) obstacle_y
 
 --- task ---
 
-**Test:** Run your code and you should see the cactus appear at a random position. Change the `1234` value inside the seed to another number and it will appear somewhere else.
+**Test :** exécute ton code et tu devrais voir le cactus apparaître à une position aléatoire. Modifie la valeur `1234` à l'intérieur du seed par un autre nombre et elle apparaîtra ailleurs.
 
 --- /task ---
