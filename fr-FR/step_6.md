@@ -1,10 +1,10 @@
 ## Collisions
 
-Recall that in the first step you created a 'safe' colour.
+Rappelle-toi que dans la première étape, tu as créé une couleur « sur ».
 
 --- task ---
 
-Create a variable to store the colour the player emoji is currently touching.
+Crée une variable pour stocker la couleur que l'emoji du joueur touche actuellement.
 
 --- code ---
 ---
@@ -20,7 +20,7 @@ def draw_player(): player_on = get(mouse_x, 320).hex text('🤠', mouse_x, 320)
 
 --- task ---
 
-If the player is touching the safe colour, draw the player emoji. If it is not, draw an explosion emoji to show they have crashed.
+Si le joueur touche la couleur « sur », dessine l'emoji du joueur. Si ce n’est pas le cas, dessine un emoji d’explosion pour montrer qu’ils se sont écrasés.
 
 --- code ---
 ---
@@ -38,8 +38,8 @@ text('💥', mouse_x, 320)
 
 --- task ---
 
-**Test:** Run your code and move the player. You should see the explosion emoji if your player touches an obstacle.
+**Test :** exécute ton code et déplace le joueur. Tu devrais voir l'émoji d'explosion si ton joueur touche un obstacle.
 
-Make sure that in `draw()`, the line of code to `draw_obstacles()` is before `draw_player()`. If you check for collisions before drawing the obstacles in a frame, then there won’t be any obstacles to collide with!
+Assure-toi que dans `draw()`, la ligne de code pour `dessine_obstacles()` est avant `dessine_joueur()`. Si tu vérifies les collisions avant de dessiner les obstacles dans une image, il n'y aura pas d'obstacles avec lesquels entrer en collision !
 
 --- /task ---
