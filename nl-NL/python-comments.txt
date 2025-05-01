@@ -1,8 +1,8 @@
-Put code to run every frame here
+Zet hier code om bij elk frame uit te voeren
 
-Draw player function goes here
+De teken speler functie komt hier
 
-Draw obstacles function goes here
+De teken obstakels functie komt hier
 
 Geweldig gevlogen!
 
