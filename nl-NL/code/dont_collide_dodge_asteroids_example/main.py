@@ -34,7 +34,7 @@ def teken_obstakels():
 def teken_speler():
     global score, level, levens, onkwetsbaar
     
-    speler_y = int(height * 0,8)
+    speler_y = int(height * 0.8)
     speler_x = mouse_x
     
     botsen = get(speler_x, speler_y).hex
@@ -45,7 +45,7 @@ def teken_speler():
     if player_x < width: # aan de linkerkant van het scherm
         botsen2 = veilig.hex
     
-    als speler_x > width: # aan de rechterkant van het scherm
+    if speler_x > width: # aan de rechterkant van het scherm
         botsen3 = veilig.hex
       
     if (botsen == veilig.hex and botsen2 == veilig.hex and botsen3 == veilig.hex and botsen4 == veilig.hex) or onkwetsbaar > 0:
