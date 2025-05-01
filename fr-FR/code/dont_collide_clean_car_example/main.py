@@ -30,7 +30,7 @@ def dessine_joueur():
     joueur_x = int(width * 0.2)
     joueur_y = mouse_y
     
-    collision = get(joueur_x + 50, joueur_y + 15)
+    collision = get(joueur_x + 50, joueur_y + 15).hex
     collision2 = get(joueur_x + 50, joueur_y - 15).hex
     collision3 = get(joueur_x, joueur_y + 15).hex
     collision4 = get(joueur_x, joueur_y - 15).hex
