@@ -78,7 +78,7 @@ Tu peux coller un emoji différent si tu le souhaites.
 
 --- task ---
 
-Pour que le joueur suive la souris lorsqu'elle se déplace d'un côté à l'autre, modifie la position x du joueur sur `souris_x`.
+Pour que le joueur suive la souris lorsqu'elle se déplace d'un côté à l'autre, modifie la position x du joueur sur `mouse_x`.
 
 --- code ---
 ---
