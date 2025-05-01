@@ -1,10 +1,10 @@
-## Collisions
+## Botsingen
 
-Recall that in the first step you created a 'safe' colour.
+Je weet misschien nog dat je in de eerste stap een 'veilige' kleur hebt gemaakt.
 
 --- task ---
 
-Create a variable to store the colour the player emoji is currently touching.
+Maak een variabele om de kleur op te slaan die de speler-emoji op dat moment raakt.
 
 --- code ---
 ---
@@ -20,7 +20,7 @@ def draw_player(): player_on = get(mouse_x, 320).hex text('🤠', mouse_x, 320)
 
 --- task ---
 
-If the player is touching the safe colour, draw the player emoji. If it is not, draw an explosion emoji to show they have crashed.
+Als de speler de veilige kleur raakt, teken dan de emoji van de speler. Als dat niet zo is, teken dan een explosie-emoji om aan te geven dat ze zijn gebotst.
 
 --- code ---
 ---
@@ -38,8 +38,8 @@ text('💥', mouse_x, 320)
 
 --- task ---
 
-**Test:** Run your code and move the player. You should see the explosion emoji if your player touches an obstacle.
+**Test:** Voer je code uit en verplaats de speler. Je zou de explosie-emoji moeten zien als je speler een obstakel raakt.
 
-Make sure that in `draw()`, the line of code to `draw_obstacles()` is before `draw_player()`. If you check for collisions before drawing the obstacles in a frame, then there won’t be any obstacles to collide with!
+Zorg ervoor dat in `draw()` de regel code voor `teken_obstakels()` vóór `teken_speler()` staat. Als je controleert op botsingen voordat je de obstakels in een frame tekent, zijn er geen obstakels waar je tegenaan kunt botsen!
 
 --- /task ---
