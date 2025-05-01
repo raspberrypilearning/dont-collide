@@ -1,0 +1,17 @@
+safe
+
+draw_player
+
+draw_obstacles
+
+obstacle_x
+
+obstacle_y
+
+screen_size
+
+player_on
+
+score
+
+lives
