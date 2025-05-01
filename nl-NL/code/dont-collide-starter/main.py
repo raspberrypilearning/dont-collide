@@ -2,18 +2,18 @@ from p5 import *
 from random import randint, seed
 
 # Voeg hier global variabelen toe
-screen_size = 400
+scherm_grootte = 400
 
-# Draw player function goes here
+De teken speler functie komt hier
 
 
 
-# Draw obstacles function goes here
+# De teken obstakels functie komt hier
 
 
 def setup():
     # Zet de code om eenmalig uit te voeren hier onder
-    size(screen_size, screen_size)
+    size(scherm_grootte, scherm_grootte)
     text_size(40)
 
 
