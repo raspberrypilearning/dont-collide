@@ -4,14 +4,14 @@ teken_speler
 
 teken_obstakels
 
-obstacle_x
+obstakel_x
 
-obstacle_y
+obstakel_y
 
-screen_size
+scherm_grootte
 
-player_on
+speler_aan
 
 score
 
-lives
+levens
