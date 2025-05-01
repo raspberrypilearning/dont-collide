@@ -30,22 +30,22 @@ def dessine_joueur():
   
     joueur_y = int(height * 0.8)
   
-    collision = get(souris_x, joueur_y).hex
-    collision2 = get(souris_x - 12, joueur_y + 20).hex
-    collision3 = get(souris_x + 12, joueur_y + 20).hex
-    collision4 = get(souris_x, joueur_y + 40).hex
+    collision = get(mouse_X, joueur_y).hex
+    collision2 = get(mouse_x - 12, joueur_y + 20).hex
+    collision3 = get(mouse_x + 12, joueur_y + 20).hex
+    collision4 = get(mouse_x, joueur_y + 40).hex
   
-    if souris_x < width : # hors de la gauche de l'écran
+    if mouse_x < width: # hors de la gauche de l'écran
         collision2 = sur.hex
   
-    if souris_x > width : # hors de la droite de l'écran
+    if mouse_x > width: # hors de la droite de l'écran
         collision3 = sur.hex
   
     if collision == sur.hex and collision2 == sur.hex and collision3 == sur.hex and collision4 == sur.hex:
-        text('🎈', souris_x, joueur_y)
+        text('🎈', mouse_x, joueur_y)
         score += niveau
     else:
-        text('💥', souris_x, joueur_y)
+        text('💥', mouse_x, joueur_y)
         niveau = 0
 
 
