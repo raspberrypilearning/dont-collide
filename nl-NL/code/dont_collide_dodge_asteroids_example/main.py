@@ -21,8 +21,8 @@ def teken_obstakels():
       
     for i in range(6 + level):
         ob_x = randint(0, width)
-        obstakel_y = randint(0, height) + (frame_count * level)
-        obstakel_y %= height # omwikkelen
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height # omwikkelen
         push_matrix()
         translate(ob_x, ob_y)
         rotate(degrees(randint(1, 359)+frame_count / 1000))
@@ -42,7 +42,7 @@ def teken_speler():
     botsen3 = get(speler_x + 18, speler_y + 17).hex
     botsen4 = get(speler_x, speler_y + 25).hex
     
-    if player_x < width: # aan de linkerkant van het scherm
+    if speler_x < width: # aan de linkerkant van het scherm
         botsen2 = veilig.hex
     
     if speler_x > width: # aan de rechterkant van het scherm

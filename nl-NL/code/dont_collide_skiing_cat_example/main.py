@@ -33,7 +33,7 @@ def teken_obstakels():
 def teken_speler():
     global score, snelheid, skien, gecrasht
     
-    speler_y = int(height * 0,8)
+    speler_y = int(height * 0.8)
     
     fill(veilig)
   
