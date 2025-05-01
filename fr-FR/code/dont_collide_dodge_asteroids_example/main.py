@@ -26,7 +26,7 @@ def dessine_obstacles():
         push_matrix()
         translate(ob_x, ob_y)
         rotate(degrees(randint(1, 359)+frame_count / 1000))
-        image(rock, 0, 0, randint(18,24), randint(18,24))
+        image(rocher, 0, 0, randint(18,24), randint(18,24))
         pop_matrix()
 
     
@@ -52,7 +52,7 @@ def dessine_joueur():
         if vies == 0 and frame_count % 12 == 0:
             tint(200, 0, 0)
       
-        image(rocket, joueur_x, joueur_y + 25, 64, 64)
+        image(fusee, joueur_x, joueur_y + 25, 64, 64)
         score += niveau
         invun -= 1
         no_tint()
@@ -66,7 +66,7 @@ def dessine_joueur():
         vies -= 1
         invun = 50
         tint(200, 0, 0)
-        image(rocket, joueur_x, joueur_y + 25, 64, 64)
+        image(fusee, joueur_x, joueur_y + 25, 64, 64)
         no_tint()
         score += niveau
     else:
@@ -95,13 +95,13 @@ def affichage_vies():
     text('Vies', width * 0.05, 10, 30, 20)
     
     for i in range(vies):
-        image(rocket, width * 0.05 + i * 25, 40, 20, 20)
+        image(fusee, width * 0.05 + i * 25, 40, 20, 20)
   
 
 def setup():
     # Configure ton animation ici
     size(400, 400)
-    global rocket, rock, random_seed
+    global rocher, fusee, random_seed
     
     text_size(40)
     text_align(CENTER, TOP)  # position près du centre, en haut
