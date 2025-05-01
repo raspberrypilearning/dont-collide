@@ -1,16 +1,16 @@
-## Set the scene
+## Het opzetten van de scene
 
 --- task ---
 
-Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}.
+Open het [startproject](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}.
 
 --- /task ---
 
 --- task ---
 
-Create a variable called `safe` to store the background colour.
+Maak een variabele met de naam `veilig` om de achtergrondkleur op te slaan.
 
-In the game, the player is safe if they are touching the background colour.
+In het spel is de speler veilig als hij de achtergrondkleur raakt.
 
 --- code ---
 ---
@@ -27,15 +27,15 @@ def draw():
 
 --- task ---
 
-**Test:** Run your code and you should see a coloured square.
+**Test:** Voer je code uit, je zou een gekleurd vierkant moeten zien.
 
-The colour is three numbers - the amount of red, green and blue. Try changing the numbers to any whole number between 0 and 255 to get a different colour.
+De kleur bestaat uit drie getallen: de hoeveelheid rood, groen en blauw. Probeer de getallen te vervangen door een geheel getal tussen 0 en 255 om een andere kleur te krijgen.
 
 --- /task ---
 
 --- task ---
 
-Define a `draw_player` function. Inside, add an emoji and a pair of x, y coordinates to represent the player.
+Definieer een `teken_speler` functie. Voeg binnenin een emoji en een paar x- en y-coördinaten toe om de speler voor te stellen.
 
 --- code ---
 ---
@@ -51,7 +51,7 @@ def draw_player(): text('🤠', 200, 320)
 
 --- task ---
 
-Call the `draw_player` function so that the player is drawn on the screen.
+Roep de functie `teken_speler` aan, zodat de speler op het scherm wordt getekend.
 
 --- code ---
 ---
@@ -68,9 +68,9 @@ def draw():
 
 --- task ---
 
-**Test:** Run your code and you should see the emoji appear near the bottom of the screen.
+**Test:** Voer je code uit, je zou de emoji onderaan het scherm moeten zien verschijnen.
 
-You can paste in a different emoji if you want to.
+Je kunt desgewenst een andere emoji plakken.
 
 --- /task ---
 
@@ -78,7 +78,7 @@ You can paste in a different emoji if you want to.
 
 --- task ---
 
-To make the player follow the mouse as it moves from side to side, change the player's x position to `mouse_x`.
+Om de speler de muis te laten volgen terwijl deze van links naar rechts beweegt, verander je de x-positie van de speler in `mouse_x`.
 
 --- code ---
 ---
@@ -94,7 +94,7 @@ def draw_player(): text('🤠', mouse_x, 320)
 
 --- task ---
 
-Run your code and check that the player moves left and right when you move the mouse.
+Voer je code uit en controleer of de speler naar links en rechts beweegt wanneer je de muis beweegt.
 
 
 --- /task ---
