@@ -10,24 +10,24 @@ def speler_veilig():
 
     # Gezicht
     fill(200, 134, 145)
-    ellipse(muis_x, speler_y, 60, 60)
+    ellipse(mouse_x, speler_y, 60, 60)
 
     # Ogen
     fill(178, 200, 145)
-    ellipse(muis_x - 10, speler_y - 10, 20, 20)
-    ellipse(muis_x + 10, speler_y - 10, 20, 20)
+    ellipse(mouse_x - 10, speler_y - 10, 20, 20)
+    ellipse(mouse_x + 10, speler_y - 10, 20, 20)
     fill(0)
-    ellipse(muis_x - 10, speler_y - 10, 10, 10)
-    ellipse(muis_x + 10, speler_y - 10, 10, 10)
+    ellipse(mouse_x - 10, speler_y - 10, 10, 10)
+    ellipse(mouse_x + 10, speler_y - 10, 10, 10)
     fill(255)
-    ellipse(muis_x - 12, speler_y - 12, 5, 5)
-    ellipse(muis_x + 12, speler_y - 12, 5, 5)
+    ellipse(mouse_x - 12, speler_y - 12, 5, 5)
+    ellipse(mouse_x + 12, speler_y - 12, 5, 5)
 
     # Mond
     fill(0)
-    ellipse(muis_x, speler_y + 10, 15, 10)
+    ellipse(mouse_x, speler_y + 10, 15, 10)
     fill(200, 134, 145)
-    ellipse(muis_x, speler_y + 5, 10, 10)
+    ellipse(mouse_x, speler_y + 5, 10, 10)
 
 
 def speler_gebotst():
@@ -35,24 +35,24 @@ def speler_gebotst():
 
     # Gezicht
     fill(178, 200, 145)
-    ellipse(muis_x, speler_y, 60, 60)
+    ellipse(mouse_x, speler_y, 60, 60)
 
     # Ogen
     fill(149, 161, 195)
-    ellipse(muis_x - 10, speler_y - 10, 20, 20)
-    ellipse(muis_x + 10, speler_y - 10, 20, 20)
+    ellipse(mouse_x - 10, speler_y - 10, 20, 20)
+    ellipse(mouse_x + 10, speler_y - 10, 20, 20)
     fill(0)
-    ellipse(muis_x - 10, speler_y - 10, 10, 10)
-    ellipse(muis_x + 10, speler_y - 10, 10, 10)
+    ellipse(mouse_x - 10, speler_y - 10, 10, 10)
+    ellipse(mouse_x + 10, speler_y - 10, 10, 10)
     fill(255)
-    ellipse(muis_x - 12, speler_y - 12, 5, 5)
-    ellipse(muis_x + 12, speler_y - 12, 5, 5)
+    ellipse(mouse_x - 12, speler_y - 12, 5, 5)
+    ellipse(mouse_x + 12, speler_y - 12, 5, 5)
 
     # Mond
     fill(0)
-    ellipse(muis_x, speler_y + 15, 15, 10)
+    ellipse(mouse_x, speler_y + 15, 15, 10)
     fill(178, 200, 145)
-    ellipse(muis_x, speler_y + 20, 10, 10)
+    ellipse(mouse_x, speler_y + 20, 10, 10)
 
 
 def teken_speler():
@@ -61,24 +61,24 @@ def teken_speler():
 
     speler_y = int(height * 0,8)
 
-    botsen = get(muis_x, speler_y)
-    botsen2 = get(muis_x, speler_y + 30).hex
-    botsen3 = get(muis_x + 30, speler_y).hex
-    botsen4 = get(muis_x, speler_y - 30).hex
+    botsen = get(mouse_x, speler_y).hex
+    botsen2 = get(mouse_x, speler_y + 30).hex
+    botsen3 = get(mouse_x + 30, speler_y).hex
+    botsen4 = get(mouse_x, speler_y - 30).hex
 
-    if muis_x < width: # voorbij de linkerkant van het scherm
+    if mouse_x < width: # voorbij de linkerkant van het scherm
         botsen2 = veilig.hex
 
-    if muis_x > width: # voorbij de rechterkant van het scherm
+    if mouse_x > width: # voorbij de rechterkant van het scherm
         botsen3 = veilig.hex
 
-    # print(collide, collide2, collide3, collide4)
+    # print(botsen, botsen2, botsen3, botsen4)
 
     if (
-        collide == safe.hex
-        and collide2 == safe.hex
-        and collide3 == safe.hex
-        and collide4 == safe.hex
+        botsen == veilig.hex
+        and botsen2 == veilig.hex
+        and botsen3 == veilig.hex
+        and botsen4 == veilig.hex
     ):
         speler_veilig()
         score += level
@@ -94,13 +94,13 @@ def teken_obstakels():
 
     if frame_count & height == height - 1 and level < 5:
         level += 1
-        print("You reached level", level)
+        print('Je hebt level', level, 'bereikt')
 
     for i in range(9 + level):
         ob_x = randint(0, width)
         ob_y = randint(0, height) + frame_count
         ob_y %= height
-        text("🦠", ob_x, ob_y)
+        text('🦠', ob_x, ob_y)
 
 
 def setup():
@@ -120,7 +120,7 @@ def draw():
     if level > 0:
         background(veilig)
         fill(145, 134, 126)
-        text("Score: " + str(score), width / 2, 20)
+        text('Score: ' + str(score), width/2, 20)
         teken_obstakels()
         teken_speler()
 
