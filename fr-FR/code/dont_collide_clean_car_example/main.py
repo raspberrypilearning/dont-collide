@@ -28,7 +28,7 @@ def dessine_joueur():
     global score, niveau
     
     joueur_x = int(width * 0.2)
-    joueur_y = souris_y
+    joueur_y = mouse_y
     
     collision = get(joueur_x + 50, joueur_y + 15)
     collision2 = get(joueur_x + 50, joueur_y - 15).hex
