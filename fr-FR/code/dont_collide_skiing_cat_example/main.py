@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Importe les librairies de code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 

@@ -2,37 +2,16 @@ sur
 
 dessine_joueur
 
-joueur_y
-
-joueur
-
-dessine_joueur
-
-mouse_x
-
-fichier_image
-
-x_coord
-
-y_coord
-
-largeur
-
-hauteur
-
 dessine_obstacles
 
-ob_x
+obstacle_x
 
-ob_y
+obstacle_y
 
-obstacle
+taille_ecran
 
-collision
-
-niveau
+joueur_sur
 
 score
 
-message
-
+vies

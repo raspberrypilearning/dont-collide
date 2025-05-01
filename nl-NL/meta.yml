@@ -2,9 +2,9 @@
 title: Niet botsen!
 hero_image: images/banner.png
 description:
-  - Bouw een 'runner game' waarin je personage moet voorkomen dat hij botst
+  - Bouw een eindeloos 'runner game' waarin je personage moet voorkomen dat hij botst
   - met obstakels
-meta_title: Python programmeer projecten voor kinderen en tieners | Niet botsen!
+meta_title: Python programmeerprojecten voor kinderen en tieners | Niet botsen!
 meta_description: Leer Python met de codeerprojecten van de Raspberry Pi Foundation voor kinderen en tieners. Bouw een scrollend runner-spel in Python en vermijd obstakels.
 version: 4
 listed: true
@@ -12,12 +12,13 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - title: Wat ga je maken
-  - title: Het opzetten van het thema
-  - title: Creëer obstakels
+  - title: Het opzetten van de scene
+  - title: Maak een obstakel
     completion:
       - engaged
-  - title: Botsingsdetectie
-  - title: Versnellen!
+  - title: Willekeurige obstakels
+  - title: Veel obstakels
+  - title: Botsingen
     completion:
       - internal
   - title: Snelle quiz
@@ -28,6 +29,6 @@ steps:
       passing_score: 3
     completion:
       - external
-  - title: Verbeter je project
-  - title: Deel
+  - title: Uitdaging
+    challenge: true
   - title: Wat kun je verder nog doen?

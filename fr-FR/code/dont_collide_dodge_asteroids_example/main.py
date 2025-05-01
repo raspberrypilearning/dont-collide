@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Importe les librairies de code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 
@@ -106,8 +106,8 @@ def setup():
     text_size(40)
     text_align(CENTER, TOP)  # position près du centre, en haut
     
-    rocket = load_image('rocket.png')
-    rock = load_image('moon.png')
+    fusee = load_image('rocket.png')
+    rocher = load_image('moon.png')
     random_seed = randint(0, 1000000)
   
 def draw():

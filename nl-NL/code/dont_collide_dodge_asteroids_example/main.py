@@ -20,11 +20,11 @@ def teken_obstakels():
         print('Je hebt level', level, 'bereikt')
       
     for i in range(6 + level):
-        obstakel_x = randint(0, width)
+        ob_x = randint(0, width)
         obstakel_y = randint(0, height) + (frame_count * level)
         obstakel_y %= height # omwikkelen
         push_matrix()
-        translate(obstakel_x, obstakel_y)
+        translate(ob_x, ob_y)
         rotate(degrees(randint(1, 359)+frame_count / 1000))
         image(rots, 0, 0, randint(18,24), randint(18,24))
         pop_matrix()
@@ -42,13 +42,13 @@ def teken_speler():
     botsen3 = get(speler_x + 18, speler_y + 17).hex
     botsen4 = get(speler_x, speler_y + 25).hex
     
-    if speler_x < width: # aan de linkerkant van het scherm
+    if player_x < width: # aan de linkerkant van het scherm
         botsen2 = veilig.hex
     
     if speler_x > width: # aan de rechterkant van het scherm
         botsen3 = veilig.hex
       
-    if (botsen == veilig.hex and botsen2 == veilig.hex and botsen3 == veilig.hex and botsen4 == veilig.hex) or onkwetsbaar >0:
+    if (botsen == veilig.hex and botsen2 == veilig.hex and botsen3 == veilig.hex and botsen4 == veilig.hex) or onkwetsbaar > 0:
         if levens == 0 and frame_count % 12 == 0:
             tint(200, 0, 0)
       

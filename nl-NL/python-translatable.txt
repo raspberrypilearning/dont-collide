@@ -2,37 +2,16 @@ veilig
 
 teken_speler
 
-speler_y
-
-speler
-
-teken_speler
-
-mouse_x
-
-afbeelding_bestand
-
-x_coord
-
-y_coord
-
-width
-
-height
-
 teken_obstakels
 
 obstakel_x
 
 obstakel_y
 
-obstakel
+scherm_grootte
 
-botsen
-
-level
+speler_aan
 
 score
 
-bericht
-
+levens
