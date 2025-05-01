@@ -4,7 +4,7 @@ from random import randint, seed
 # Voeg hier global variabelen toe
 scherm_grootte = 400
 
-De teken speler functie komt hier
+# De teken speler functie komt hier
 
 
 
