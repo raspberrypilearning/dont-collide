@@ -1,0 +1,17 @@
+Put code to run every frame here
+
+Draw player function goes here
+
+Draw obstacles function goes here
+
+Great flying!
+
+Doing well!
+
+Keep going!
+
+But be careful!
+
+Push harder!
+
+Head for base!
