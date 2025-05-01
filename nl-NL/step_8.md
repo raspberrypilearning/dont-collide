@@ -1,66 +1,66 @@
-## Challenge
+## Uitdaging
 
 --- challenge ---
 
-Now it is over to you! Use the skills you have learned to finish the game.
+Nu ben jij aan de beurt! Gebruik de vaardigheden die je hebt geleerd om het spel te voltooien.
 
 --- task ---
 
-Use different emojis to represent the player and the obstacles.
+Gebruik verschillende emoji's om de speler en de obstakels weer te geven.
 
 --- /task ---
 
 --- task ---
 
-Draw the player or the obstacles using shapes instead (you learned this in the [Make a face](https://projects.raspberrypi.org/en/projects/editor-make-a-face/editor){:target="_blank"} project).
+Teken de speler of de obstakels in plaats daarvan met vormen (dit heb je geleerd in het project [Maak een gezicht](https://projects.raspberrypi.org/en/projects/editor-make-a-face/editor){:target="_blank"}).
 
 --- /task ---
 
 --- task ---
 
-Draw the player or the obstacles using images instead (you learned this in the [Rocket launch](https://projects.raspberrypi.org/en/projects/editor-rocket-launch/editor){:target="_blank"}  project).
+Teken de speler of de obstakels in plaats daarvan met behulp van afbeeldingen (dit heb je geleerd in het project [Raket lancering](https://projects.raspberrypi.org/en/projects/editor-rocket-launch/editor){:target="_blank"}).
 
 --- /task ---
 
 --- task ---
 
-Change one line of code to make the obstacles move faster.
+Wijzig één regel code om de obstakels sneller te laten bewegen.
 
 --- /task ---
 
 --- task ---
 
-Create a variable and add one to it each time the player crashes.
+Maak een variabele aan en voeg er elke keer dat de speler botst 1 aan toe.
 
 --- /task ---
 
 --- task ---
 
-Make the obstacles move faster after every crash.
+Zorg ervoor dat de obstakels na elke botsing sneller gaan bewegen.
 
 --- /task ---
 
 --- task ---
 
-Add an item for the player to pick up, which disappears when the player touches it.
+Voeg een voorwerp toe dat de speler moet ophalen en dat verdwijnt zodra de speler het raakt.
 
 --- /task ---
 
 --- task ---
 
-Add a variable to keep track of the player's score.
+Voeg een variabele toe om de score van de speler bij te houden.
 
 --- /task ---
 
 --- task ---
 
-Stop the game if the player crashes.
+Stop het spel als de speler botst.
 
 --- /task ---
 
 --- task ---
 
-Display a text message on the screen to say 'Game over'.
+Geef een bericht weer op het scherm met de tekst 'Game over'.
 
 --- /task ---
 
