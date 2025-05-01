@@ -7,7 +7,7 @@ from random import randint, seed
 snelheid = 1
 score = 0
 
-# De functie teken_achtergrond komt hier
+# De functie teken_obstakels komt hier
 def teken_obstakels():
     global snelheid
     
@@ -37,13 +37,13 @@ def teken_speler():
     
     fill(veilig)
   
-    botsen = get(muis_x, speler_y).hex
+    botsen = get(mouse_x, speler_y).hex
     
     if botsen == veilig.hex:
-        image(skien, muis_x, speler_y, 30, 30)
+        image(skien, mouse_x, speler_y, 30, 30)
         score += snelheid
     else:
-        afbeelding(gecrasht, muis_x, speler_y, 30, 30)
+        image(gecrasht, mouse_x, speler_y, 30, 30)
         snelheid = 0
     
   
