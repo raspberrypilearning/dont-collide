@@ -1,11 +1,11 @@
-## Random obstacles
+## Willekeurig obstakels
 
 
-Currently, the obstacle disappears off the bottom of the screen, because its `obstacle_y` position becomes larger than the screen size.
+Momenteel verdwijnt het obstakel van de onderkant van het scherm, omdat de `obstakel_y` positie groter wordt dan de schermgrootte.
 
 --- task ---
 
-Use the modulo (%) operator to divide the y position by the screen size and give you the **remainder**. This makes the obstacle reappear at the top!
+Gebruik de modulo (%) operator om de y-positie te delen door de schermgrootte, je krijgt dan de **restwaarde**. Hierdoor verschijnt het obstakel opnieuw bovenaan!
 
 --- code ---
 ---
@@ -21,13 +21,13 @@ def draw_obstacles(): obstacle_x = 200 obstacle_y = 200 + frame_count obstacle_y
 
 --- task ---
 
-**Test:** Run your code and you should see the obstacle reach the bottom of the screen and then restart from the top.
+**Test:** Voer je code uit, je zou moeten zien dat het obstakel de onderkant van het scherm bereikt en vervolgens opnieuw begint vanaf de bovenkant.
 
 --- /task ---
 
 --- task ---
 
-Add a line of code for a random **seed**. A seed lets you generate the same random numbers in each frame.
+Voeg een regel code toe voor een willekeurige **seed**. Met een seed kun je in elk frame dezelfde willekeurige getallen genereren.
 
 --- code ---
 ---
@@ -44,7 +44,7 @@ def draw_obstacles(): seed(1234) obstacle_x = 200 obstacle_y = 200 + frame_count
 
 --- task ---
 
-Update the code so that the x, y coordinates for the obstacle are generated randomly.
+Werk de code bij zodat de x- en y-coördinaten voor het obstakel willekeurig worden gegenereerd.
 
 --- code ---
 ---
@@ -61,6 +61,6 @@ def draw_obstacles(): seed(1234) obstacle_x = randint(0, screen_size) obstacle_y
 
 --- task ---
 
-**Test:** Run your code and you should see the cactus appear at a random position. Change the `1234` value inside the seed to another number and it will appear somewhere else.
+**Test:** Voer je code uit en je zou de cactus op een willekeurige positie moeten zien verschijnen. Verander de waarde `1234` van de seed naar een ander getal, dan verschijnt de cactus ergens anders.
 
 --- /task ---
