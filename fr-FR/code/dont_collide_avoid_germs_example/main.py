@@ -10,24 +10,24 @@ def joueur_sur():
 
     # Le visage
     fill(200, 134, 145)
-    ellipse(souris_x, joueur_y, 60, 60)
+    ellipse(mouse_x, joueur_y, 60, 60)
 
     # Les yeux
     fill(178, 200, 145)
-    ellipse(souris_x - 10, joueurs_y - 10, 20, 20)
-    ellipse(souris_x + 10, joueur_y - 10, 20, 20)
+    ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
+    ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
     fill(0)
-    ellipse(souris_x - 10, joueur_y - 10, 10, 10)
-    ellipse(souris_x + 10, joueur_y - 10, 10, 10)
+    ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
+    ellipse(mouse_x + 10, joueur_y - 10, 10, 10)
     fill(255)
-    ellipse(souris_x - 12, joueur_y - 12, 5, 5)
-    ellipse(souris_x + 12, joueur_y - 12, 5, 5)
+    ellipse(mouse_x - 12, joueur_y - 12, 5, 5)
+    ellipse(mouse_x + 12, joueur_y - 12, 5, 5)
 
     # La bouche
     fill(0)
-    ellipse(souris_x, joueur_y + 10, 15, 10)
+    ellipse(mouse_x, joueur_y + 10, 15, 10)
     fill(200, 134, 145)
-    ellipse(souris_x, joueur_y + 5, 10, 10)
+    ellipse(mouse_x, joueur_y + 5, 10, 10)
 
 
 def joueur_ecrase():
@@ -35,24 +35,24 @@ def joueur_ecrase():
 
     # Le visage
     fill(178, 200, 145)
-    ellipse(souris_x, joueur_y, 60, 60)
+    ellipse(mouse_x, joueur_y, 60, 60)
 
     # Les yeux
     fill(149, 161, 195)
-    ellipse(souris_x - 10, joueur_y - 10, 20, 20)
-    ellipse(souris_x + 10, joueur_y - 10, 20, 20)
+    ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
+    ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
     fill(0)
-    ellipse(souris_x - 10, joueur_y - 10, 10, 10)
-    ellipse(souris_x + 10, joueur_y - 10, 10, 10)
+    ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
+    ellipse(mouse_x + 10, joueur_y - 10, 10, 10)
     fill(255)
-    ellipse(souris_x - 12, joueur_y - 12, 5, 5)
-    ellipse(souris_x + 12, joueur_y - 12, 5, 5)
+    ellipse(mouse_x - 12, joueur_y - 12, 5, 5)
+    ellipse(mouse_x + 12, joueur_y - 12, 5, 5)
 
     # La bouche
     fill(0)
-    ellipse(souris_x, joueur_y + 15, 15, 10)
+    ellipse(mouse_x, joueur_y + 15, 15, 10)
     fill(178, 200, 145)
-    ellipse(souris_x, joueur_y + 20, 10, 10)
+    ellipse(mouse_x, joueur_y + 20, 10, 10)
 
 
 def dessine_joueur():
@@ -61,24 +61,24 @@ def dessine_joueur():
 
     joueur_y = int(height * 0.8)
 
-    collision = get(souris_x, joueur_y).hex
-    collision2 = get(souris_x, joueur_y + 30).hex
-    collision3 = get(souris_x + 30, joueur_y).hex
-    collision4 = get(souris_x, joueur_y - 30).hex
+    collision = get(mouse_x, joueur_y).hex
+    collision2 = get(mouse_x, joueur_y + 30).hex
+    collision3 = get(mouse_x + 30, joueur_y).hex
+    collision4 = get(mouse_x, joueur_y - 30).hex
 
-    if souris_x < width: # dépasse la gauche de l'écran
+    if mouse_x < width: # dépasse la gauche de l'écran
         collision2 = sur.hex
 
-    if souris_x > width : # dépasse la droite de l'écran
+    if mouse_x > width: # dépasse la droite de l'écran
         collision3 = sur.hex
 
-    # print(collide, collide2, collide3, collide4)
+    #print(collision, collision2, collision3, collision4)
 
     if (
-        collide == safe.hex
-        and collide2 == safe.hex
-        and collide3 == safe.hex
-        and collide4 == safe.hex
+        collision = sur.hex
+        and collision2 == sur.hex
+        and collision3 == sur.hex
+        and collision4 == sur.hex
     ):
         joueur_sur() 
         score += niveau
