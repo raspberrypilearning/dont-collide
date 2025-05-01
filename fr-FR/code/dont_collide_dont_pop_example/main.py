@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Importe les librairies de code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 
@@ -64,7 +64,7 @@ def draw():
     if niveau > 0:
         background(sur)
         fill(255)
-        text('Score : ' + str(score), width/2, 20)
+        text('Score: ' + str(score), width/2, 20)
         dessine_obstacles()
         dessine_joueur()
 

@@ -7,7 +7,7 @@ from random import randint, seed
 snelheid = 1
 score = 0
 
-# De functie teken_achtergrond komt hier
+# De functie teken_obstakels komt hier
 def teken_obstakels():
     global snelheid
     
@@ -33,7 +33,7 @@ def teken_obstakels():
 def teken_speler():
     global score, snelheid, skien, gecrasht
     
-    speler_y = int(height * 0.8)
+    speler_y = int(height * 0,8)
     
     fill(veilig)
   

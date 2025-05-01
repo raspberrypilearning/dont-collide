@@ -12,12 +12,13 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - title: Ce que tu vas faire
-  - title: Définir le thème
-  - title: Créer des obstacles
+  - title: Définir la scène
+  - title: Créer un obstacle
     completion:
       - engaged
-  - title: Détection de collision
-  - title: Accélérer !
+  - title: Obstacles aléatoires
+  - title: Beaucoup d'obstacles
+  - title: Collisions
     completion:
       - internal
   - title: Questionnaire rapide
@@ -28,6 +29,6 @@ steps:
       passing_score: 3
     completion:
       - external
-  - title: Améliorer ton projet
-  - title: Partager
+  - title: Défi
+    challenge: true
   - title: Et ensuite ?

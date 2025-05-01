@@ -1,6 +1,6 @@
 ## Wat kun je verder nog doen?
 
-Als je de [Inleiding tot Python](https://projects.raspberrypi.org/nl-NL/pathways/python-intro)-route volgt, kun je doorgaan naar het [Krachtige patronen](https://projects.raspberrypi.org/nl-NL/projects/powerful-patterns) -project. In dit project maak je inspirerende kunst die kan worden geschaald met behulp van herhaalde patronen.
+Als je de [Inleiding tot Python](https://projects.raspberrypi.org/nl-NL/pathways/python-intro)-route volgt, kun je doorgaan naar het [Krachtige patronen](https://projects.raspberrypi.org/nl-NL/projects/powerful-patterns)-project. In dit project maak je inspirerende kunst die kan worden geschaald met behulp van herhaalde patronen.
 
 --- print-only ---
 
