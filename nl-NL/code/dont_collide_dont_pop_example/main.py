@@ -28,7 +28,7 @@ def teken_obstakels():
 def teken_speler():
     global score, level
   
-    speler_y = int(height * 0,8)
+    speler_y = int(height * 0.8)
   
     botsen = get(mouse_x, speler_y).hex
     botsen2 = get(mouse_x, speler_y + 20).hex

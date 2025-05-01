@@ -59,7 +59,7 @@ def teken_speler():
 
     global speler_y, veilig, score, level
 
-    speler_y = int(height * 0,8)
+    speler_y = int(height * 0.8)
 
     botsen = get(mouse_x, speler_y).hex
     botsen2 = get(mouse_x, speler_y + 30).hex
@@ -115,7 +115,7 @@ def draw():
     # Zet hier code om bij elk frame uit te voeren
     global score, veilig, level
 
-    veilig = color(149, 161, 195)
+    veilig = Color(149, 161, 195)
 
     if level > 0:
         background(veilig)
