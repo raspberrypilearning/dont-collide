@@ -1,10 +1,10 @@
-## Lots of obstacles
+## Veel obstakels
 
-Now you will add code to make lots of obstacles to avoid.
+Nu ga je code toevoegen om heel veel obstakels te maken die je moet vermijden.
 
 --- task ---
 
-Add a loop and indent the code to draw an obstacle. The loop will run this code multiple times.
+Voeg een lus toe en laat de code inspringen om een obstakel te tekenen. De lus voert deze code meerdere keren uit.
 
 --- code ---
 ---
@@ -16,18 +16,18 @@ def draw_obstacles(): seed(1234) for i in range(8): obstacle_x = randint(0, scre
 
 --- /code ---
 
-Make sure that the code for the seed is before the loop, otherwise all of your obstacles will be generated on top of each other!
+Zorg ervoor dat de code voor de seed vóór de lus staat, anders worden al je obstakels bovenop elkaar gegenereerd!
 
 --- /task ---
 
 --- task ---
 
-Change the number inside `range()` to control how many obstacles are created.
+Wijzig het getal binnen `range()` om te bepalen hoeveel obstakels er worden gecreëerd.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and you should see several obstacles.
+**Test:** Voer je code uit, je zou verschillende obstakels moeten zien.
 
 --- /task ---
