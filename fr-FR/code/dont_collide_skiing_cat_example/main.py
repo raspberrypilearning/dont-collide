@@ -37,13 +37,13 @@ def dessine_joueur():
     
     fill(sur)
   
-    collision = get(souris_x, joueur_y).hex
+    collision = get(mouse_x, joueur_y).hex
     
     if collision == sur.hex:
-        image(ski, souris_x, joueur_y, 30, 30)
+        image(ski, mouse_x, joueur_y, 30, 30)
         score += vitesse
     else:
-        image(chute, souris_x, joueur_y, 30, 30)
+        image(chute, mouse_x, joueur_y, 30, 30)
         vitesse = 0
     
   
