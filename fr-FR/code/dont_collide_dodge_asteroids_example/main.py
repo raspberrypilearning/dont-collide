@@ -35,7 +35,7 @@ def dessine_joueur():
     global score, niveau, vies, invun
     
     joueur_y = int(height * 0.8)
-    joueur_x = souris_x
+    joueur_x = mouse_x
     
     collision = get(joueur_x, joueur_y).hex
     collision2 = get(joueur_x - 18, joueur_y + 17).hex
