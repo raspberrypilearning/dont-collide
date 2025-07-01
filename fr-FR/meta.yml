@@ -31,4 +31,3 @@ steps:
       - external
   - title: Défi
     challenge: true
-  - title: Et ensuite ?
